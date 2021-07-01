@@ -9,7 +9,10 @@ void main() {
   if(num > 0 ){
   print("O número é positivo: $num");
     }
-  else{
+    else if(num == 0){
+    print("O número é neutro: $num");
+	}
+    else{
     print("O número é negativo: $num");
   }
 }
