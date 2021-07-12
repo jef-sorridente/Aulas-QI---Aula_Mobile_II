@@ -1,0 +1,232 @@
+1. Escreva uma função que receba dois números inteiros retorne o menor número.
+
+void main(){
+  double nota1 = 7.5;
+  double nota2 = 8.0;
+  double nota3 = 7.8;
+  
+  print("A média calculada é: " + calcularMedia(nota1, nota2, nota3, "c").toStringAsFixed(2));
+} 
+
+double calcularMedia(double nota1, double nota2, double nota3, String letra){
+  double media;
+  if(letra == "A" || letra == "a"){
+    media = (nota1+nota2+nota3)/3;
+  }else if(letra == "B" || letra == "b"){
+    media = ((nota1*5) + (nota2*3) + (nota3*2))/(5+3+2);
+  }else if(letra == "C" || letra == "c"){
+    media = 3/((1/nota1) + (1/nota2) + (1/nota3));
+  }else{
+    media = double.parse("Letra inválida");
+  }
+  
+  return media;
+}
+
+2. Faça uma função que recebe por parâmetro um valor inteiro e positivo e retorna o valor lógico Verdadeiro caso o valor seja primo e Falso em caso contrário.
+
+
+void main(){
+  int num1 = 5;
+  int num2 = 4;
+  
+  print("Dos números informados, o menor é o " + menorNumero(num1, num2).toString());
+} 
+
+int menorNumero(int num1, int num2){
+  int menor;
+  if(num1 < num2){
+    menor = num1;
+  }else{
+    menor = num2;
+  }
+  
+  return menor;
+}
+
+3. Faça uma função que recebe um valor inteiro e verifica se o valor é positivo ou negativo. A função deve retornar um valor booleano.
+
+void main(){
+  int num = 10;
+  
+  ePrimo(num);
+} 
+
+bool ePrimo(int num){
+  if(num < 0){
+    print("Número inválido");
+  }
+  
+  for (int j = 2; j < num; j++) {
+    if (num % j == 0){
+      return false;
+    }
+  }
+  return true;
+}
+
+
+4. Faça uma função que leia um número não determinado de valores positivos e retorna a média aritmética dos mesmos.
+
+void main() {
+  numero();
+}
+
+void numero() {
+  double rec = 0;
+  int i = 0;
+  const List numero = [3, 3, 3, 6, 9];
+
+  for (int num in numero) {
+    if (num > 0) {
+      rec = rec + num;
+      i++;
+    }
+  }
+  
+  rec = rec/i;
+  
+  print("A média é $rec");
+}
+
+
+5. Escreva uma função que recebe, por parâmetro, receba 2 valores inteiros e positivo e retorna o somatório desse valor.
+
+void main(){
+  int num1 = -1;
+  int num2 = 3;
+  
+  print("Soma = " + soma(num1, num2).toString());
+  
+} 
+
+int soma(int num1, int num2){
+  int soma = 0;
+  
+  if(num1 < 0 || num2 < 0){
+    print("Os números não podem ser negativos!");
+  }else{
+    soma = num1 + num2;
+  }
+  return soma;
+}
+
+6. Faça uma função que recebe a idade de um nadador por parâmetro e retorna , também por parâmetro, a categoria desse nadador de acordo com a tabela abaixo (imagem2):
+
+void main(){
+  int idade = 16;
+  print("A categoria do nadador é a " + categoria(idade).toString());
+} 
+
+String categoria(int idade){
+  String categoria = "";
+  if(idade < 5){
+    categoria = "Não há categoria para essa idade!";
+  }else if(idade >= 5 && idade <= 7){
+    categoria = "Infantil A";
+  }else if(idade >= 8 && idade <= 10){
+    categoria = "Infantil B";
+  }else if(idade >= 11 && idade <= 13){
+    categoria = "Juvenil A";
+  }else if(idade >= 14 && idade <= 17){
+    categoria = "Juvenil B";
+  }else if(idade >=18){
+    categoria = "Adulto";
+  }
+  
+  return categoria;
+}
+
+
+7. Faça uma função que recebe um valor inteiro e verifica se o valor é par. A função deve retornar 1 se o número for par e 0 se for ímpar
+
+void main(){
+  int num = 3;
+  print(parImpar(num).toString());
+} 
+
+int parImpar(int num){
+  int retorno;
+  if(num%2 == 0){
+    retorno = 1;
+  }else{
+    retorno = 0;
+  }
+  
+  return retorno;
+}
+
+
+8. Fazer um programa que receba 2 números e informe:
+  a) A soma dos números;
+  b) O produto do primeiro número pelo quadrado do segundo;
+  c) O quadrado do primeiro número;
+  d) O triplo do dobro da soma dos dois números
+  e) A metade do triplo do dobro da soma dos dois números
+  f) O módulo do primeiro número.
+
+
+import 'dart:math';
+
+void main(){
+  dynamic num1, num2;
+  num1 = 6;
+  num2 = 4;
+  
+  operacoes(num1, num2);
+} 
+
+dynamic operacoes(dynamic num1, dynamic num2){
+  dynamic a = num1 + num2;
+  dynamic b = num1 * pow(num2, 2);
+  dynamic c = pow(num1, 2);
+  dynamic d = 3*(2*a);
+  dynamic e = d/2;
+  dynamic f = num1.abs();
+    
+  print("Soma dos números: " + a.toString());
+  print("O produto do primeiro número pelo quadrado do segundo: " + b.toString());
+  print("O quadrado do primeiro número: " + c.toString());
+  print("O triplo do dobro da soma dos dois números: " + d.toString());
+  print("A metade do triplo do dobro da soma dos dois números: " + e.toString());
+  print("O módulo do primeiro número: " + f.toString());
+}
+
+
+9-. Faça um programa que leia dois valores e imprima:
+  a) se o primeiro valor for maior que o segundo, a lista de valores do primeiro até
+o segundo;
+  b) se o primeiro valor for menor que o segundo a lista de valores do segundo até
+o primeiro em ordem decrescente;
+  c) se ambos forem iguais a mensagem "valores iguais".
+
+
+void main() {
+  int pri = 29;
+  int seg = 30;
+  
+  numero(pri,seg);
+  
+}
+
+void numero(int pri, int seg) {
+  
+  if(pri<seg){
+
+    for(int x = seg; x >= pri; x--){
+      
+      print ("$x");
+    }
+    
+  }
+  else if (seg<pri){
+    
+    for(int x = pri; x >= seg ; x--){
+      
+      print ("$x");
+    }
+   
+  }
+  else
+    print("Valores Iguais");
+}
