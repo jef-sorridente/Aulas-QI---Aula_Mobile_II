@@ -1,0 +1,173 @@
+1. Dada uma variável i iniciada com valor 0 que é incrementada ao final de cada loop de um laço de repetição. Qual é a condição de execução deste laço quando o mesmo tem a função de imprimir todos os números de 0 a 100?
+
+void main(){
+  
+  for ( int i=0; i<=100; i++){
+    
+    print("$i");
+  }
+}
+
+2. Crie um programa que leia uma lista com 10 índices, imprima na tela todos os números e retorne o maior deles.
+
+void main(){
+   int val = 0;
+  const List numero = [1,4,6,8,10,120,15,350,50,10];
+  
+  for (int num in numero )
+  {
+    print (num); 
+    if (num > val){
+      val = num;
+    }
+  }
+  
+  print ("O maior valor é $val");
+  
+}
+
+3. Suponha que você esteja desenvolvendo um programação que realiza a multiplicação entre dois números inteiros e repita esta operação até chegar ao valor de 1200. Exibir as operações efetuadas na tela.
+
+void main() {
+  int pri = 2;
+  int seg = 2;
+  int result = pri * seg;
+  int a = pri;
+  int b = seg;
+  
+  
+  for (int i = 0; result <= 1200; i++) {
+    
+      print("Valor Abaixo de 1200:");
+      print("$a X $b = $result");
+      a = result;
+      b = result;
+      result = result * result;
+  }
+}
+
+4.Desenvolver um programa que escreva os números
+pares de 1 a 10. 
+
+void main (){
+  
+  for(int x = 0; x<=10 ; x++)
+  {
+    if (x % 2 == 0){
+      print ("$x");
+    }
+  }
+}
+
+5.Desenvolver um programa em Dart que calcule
+a média da turma. Leia as médias de 10 alunos usando comandos de repetição. Use
+uma lista para armazenar as notas.
+
+void main(){
+   double val = 0;
+  const List numero = [1,4,6,8,10,9,5,5,5,10];
+  
+  for (int num in numero )
+  {
+    val = val + num;
+  }
+  
+  val = val/10;
+  print ("A média da turma é $val");
+  
+}
+
+6. Desenvolver um programa em Dart chamado
+Tabuada que receba um valor e mostre a tabuada desse valor.
+
+void main(){
+  int val = 9;
+  int result = 0;
+  print("Tabuada do $val");
+  
+  for(int i = 0; i<=10; i++){
+    result = val*i;
+    print("$val X $i = $result");
+  }
+  
+}
+
+7. Desenvolver um programa que leia a altura de
+15 jogadores de futebol e calcule a média de altura, a maior altura e a menor
+altura. Use uma lista para armazenar as alturas.
+
+void main(){
+  int big = 0;
+  int small = 300;
+  double media = 0;
+  
+  const List numero = [160,170,184,169,192,195,175,187,190,180,161,164,191,197,186];
+  
+  for (int num in numero )
+  { 
+    if (num > big){
+      big = num;
+    }
+    if (num < small){
+      small = num;
+    }
+    media = media + num;
+  }
+  
+  media = media/15;
+  
+  print ("A maior altura é $big cm");
+  print ("A menor altura é $small cm");
+  print ("A media de altura é $media cm");
+}
+
+8. Escreva um algoritmo que leia um valor inicial
+A e imprima a sequência de valores do cálculo de  A! e o seu resultado. Ex: 5! = 5 X 4 X 3 X 2
+X 1 = 120
+
+void main(){
+  
+  int val = 5;
+  print("$val");
+  for(int i = (val-1); i>0; i--){
+    val = val*i;
+     print("$i");
+  }
+  
+   print("valor é $val");
+}
+
+9. Desenvolver um programa que leia 7 pesos dos lutadores de boxes e verifique se ele está na categoria peso pesado. Sabe-se
+que o peso pesado é acima de 90 kg. Crie um map com o peso do boxeador e uma lista com o nome pelo índice.
+
+
+10.Desenvolver um programa que some os valores de multas que o Detran aplicou em 1 dia (Use uma lista com valores sortidos).  E mostre a quantidade de multas de acordo com a tabela de pontos: 7 pontos (valor até 500), 14 pontos (valor de 501 a 1000) e 21 pontos (acima de 1000 reais)
+
+void main(){
+  
+   int total = 0;
+   int sete = 0;
+   int qua = 0;
+   int vin = 0;
+  
+   const List multa = [7,14,21,21,5,12];
+  
+   for (int num in multa )
+  {
+    total++;
+    if (num <= 7){
+      sete++;
+    }
+    else if (num <= 14){
+      qua++;
+    }
+    else
+      vin++;
+  }
+  
+  print ("O total de multas é $total");
+  print ("Número de multas de até RS500,00 é $sete");
+  print ("Número de multas de RS501,00 a RS1000,00 é $qua");
+  print ("Número de multas acima de RS1001,00 é $vin");
+ 
+}
