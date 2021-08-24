@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "877687138605",
+    "firebase_url": "https://sushi-flutter-default-rtdb.firebaseio.com",
+    "project_id": "sushi-flutter",
+    "storage_bucket": "sushi-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:877687138605:android:57038e9c7e34cbff224ba4",
+        "android_client_info": {
+          "package_name": "Shushi.Flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "877687138605-sil4f432kmah4pi7qn9pjgmshbbn2vbu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfeluZyS516P_K6hvMxSYrteCwOKOTD84"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "877687138605-sil4f432kmah4pi7qn9pjgmshbbn2vbu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

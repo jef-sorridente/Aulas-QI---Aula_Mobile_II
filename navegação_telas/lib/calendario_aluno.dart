@@ -126,7 +126,6 @@ class _CalendarioAlunoState extends State<CalendarioAluno> {
     return TableRow(
       children: listaNomes.split(',').map((name) {
         return Container(
-
           alignment: Alignment.center,
           child: Text(
             name,
